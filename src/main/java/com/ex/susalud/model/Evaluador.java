@@ -8,6 +8,4 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "evaluador")
-@Getter
-@Setter
 public class Evaluador extends Persona { }

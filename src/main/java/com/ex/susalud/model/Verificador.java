@@ -7,6 +7,4 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "verificador")
-@Getter
-@Setter
 public class Verificador extends Persona { }

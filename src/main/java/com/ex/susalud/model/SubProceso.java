@@ -9,7 +9,5 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "sub_proceso")
-@Getter
-@Setter
 public class SubProceso extends AbstractProceso {
 }

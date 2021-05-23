@@ -9,7 +9,5 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "macro_proceso")
-@Getter
-@Setter
 public class MacroProceso extends AbstractProceso {
 }
