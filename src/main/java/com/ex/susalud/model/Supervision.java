@@ -1,9 +1,11 @@
 package com.ex.susalud.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.Set;
 
@@ -11,7 +13,7 @@ import java.util.Set;
 @Table(name = "supervision")
 @Getter
 @Setter
-public class Supervision {
+public class Supervision implements Serializable {
 
     private enum Tipo{FISCALIZADORA,ORIENTATIVA}
     private enum Modalidad{INTEGRAL,SELECTIVA}
@@ -58,9 +60,10 @@ public class Supervision {
 //    @OneToMany(mappedBy = "id_pos_supervision")
 //    private Set<PosicionSupervision> posicionesSupervisiones;
 
-    @OneToMany(cascade = CascadeType.ALL,
-            fetch = FetchType.LAZY,
-            mappedBy = "supervision")
-    private Set<PosicionSupervision> posicionesSupervisiones;
+//    @OneToMany(cascade = CascadeType.ALL,
+//            fetch = FetchType.LAZY,
+//            mappedBy = "supervision")
+//    @JsonIgnore
+//    private Set<PosicionSupervision> posicionesSupervisiones;
 
 }

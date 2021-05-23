@@ -1,26 +1,26 @@
 package com.ex.susalud.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Set;
 
 @Entity
 @Table(name = "posicion_supervision")
 @Getter
 @Setter
-public class PosicionSupervision {
+public class PosicionSupervision implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_pos_supervision")
     private int id;
 
-//    @OneToOne
-//    @JoinColumn(name = "id_supervision",referencedColumnName = "id_supervision")
-//    private Supervision supervision;
+    @OneToOne
+    @JoinColumn(name = "id_supervision",referencedColumnName = "id_supervision")
+    private Supervision supervision;
 
     @OneToOne
     @JoinColumn(name = "id_macro_proceso",referencedColumnName = "id_proceso")
@@ -68,9 +68,9 @@ public class PosicionSupervision {
     )
     private Set<CriterioPuntuacion> criteriosPuntuaciones;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "id_supervision", nullable = false)
-    @JsonIgnore
-    private Supervision supervision;
+//    @ManyToOne(fetch = FetchType.LAZY)
+//    @JoinColumn(name = "id_supervision", nullable = false)
+//    @JsonIgnore
+//    private Supervision supervision;
 
 }
