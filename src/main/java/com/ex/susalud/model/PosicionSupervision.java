@@ -1,5 +1,6 @@
 package com.ex.susalud.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -17,9 +18,9 @@ public class PosicionSupervision {
     @Column(name = "id_pos_supervision")
     private int id;
 
-    @OneToOne
-    @JoinColumn(name = "id_supervision",referencedColumnName = "id_supervision")
-    private Supervision supervision;
+//    @OneToOne
+//    @JoinColumn(name = "id_supervision",referencedColumnName = "id_supervision")
+//    private Supervision supervision;
 
     @OneToOne
     @JoinColumn(name = "id_macro_proceso",referencedColumnName = "id_proceso")
@@ -66,5 +67,10 @@ public class PosicionSupervision {
             inverseJoinColumns = @JoinColumn(name = "id_criterio")
     )
     private Set<CriterioPuntuacion> criteriosPuntuaciones;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "id_supervision", nullable = false)
+    @JsonIgnore
+    private Supervision supervision;
 
 }

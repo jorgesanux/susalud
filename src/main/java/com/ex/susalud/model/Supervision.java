@@ -5,6 +5,7 @@ import lombok.Setter;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.Set;
 
 @Entity
 @Table(name = "supervision")
@@ -53,5 +54,13 @@ public class Supervision {
     @OneToOne
     @JoinColumn(name = "id_entidad",referencedColumnName = "id_entidad")
     private Entidad id_entidad;
+
+//    @OneToMany(mappedBy = "id_pos_supervision")
+//    private Set<PosicionSupervision> posicionesSupervisiones;
+
+    @OneToMany(cascade = CascadeType.ALL,
+            fetch = FetchType.LAZY,
+            mappedBy = "supervision")
+    private Set<PosicionSupervision> posicionesSupervisiones;
 
 }
