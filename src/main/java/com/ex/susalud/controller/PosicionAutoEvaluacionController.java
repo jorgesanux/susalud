@@ -19,8 +19,8 @@ public class PosicionAutoEvaluacionController {
     private PosicionAutoEvaluacionRepository posicionAutoEvaluacionRepository;
 
     @GetMapping(produces = {MediaType.APPLICATION_JSON_VALUE})
-    public ResponseEntity<List<PosicionAutoEvaluacion>> getAllPosicionAutoEvaluacion(@PathVariable(value = "idPosicionAutoevaluacion") int idPosicionAutoevaluacion){
-        return new ResponseEntity<>(posicionAutoEvaluacionRepository.findByAutoEvaluacionId(idPosicionAutoevaluacion), HttpStatus.OK);
+    public ResponseEntity<List<PosicionAutoEvaluacion>> getAllPosicionAutoEvaluacion(@PathVariable(value = "idAutoevaluacion") int idAutoevaluacion){
+        return new ResponseEntity<>(posicionAutoEvaluacionRepository.findByAutoEvaluacionId(idAutoevaluacion), HttpStatus.OK);
     }
 
     @GetMapping(
@@ -30,7 +30,7 @@ public class PosicionAutoEvaluacionController {
     public ResponseEntity<PosicionAutoEvaluacion> getPosicionAutoEvaluacionById(
             @PathVariable(value = "idAutoevaluacion") int idAutoevaluacion,
             @PathVariable(value = "idPosicionAutoevaluacion") int idPosicionAutoevaluacion){
-        return new ResponseEntity<>(posicionAutoEvaluacionRepository.findByAutoEvaluacionIdAAndId(idAutoevaluacion,idPosicionAutoevaluacion).get(), HttpStatus.OK);
+        return new ResponseEntity<>(posicionAutoEvaluacionRepository.findByAutoEvaluacionIdAndId(idAutoevaluacion,idPosicionAutoevaluacion).get(), HttpStatus.OK);
     }
 
     @PostMapping(

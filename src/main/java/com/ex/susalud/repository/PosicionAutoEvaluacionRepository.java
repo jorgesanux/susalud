@@ -11,7 +11,7 @@ import java.util.Optional;
 @Repository
 public interface PosicionAutoEvaluacionRepository extends JpaRepository<PosicionAutoEvaluacion,Integer> {
     List<PosicionAutoEvaluacion> findByAutoEvaluacionId(int idPosicionAutoevaluacion);
-    Optional<PosicionAutoEvaluacion> findByAutoEvaluacionIdAAndId(int idAutoevaluacion,int idPosicionAutoevaluacion);
+    Optional<PosicionAutoEvaluacion> findByAutoEvaluacionIdAndId(int idAutoevaluacion,int idPosicionAutoevaluacion);
 
     @Transactional
     void deleteByAutoEvaluacionIdAndId(int idAutoevaluacion,int idPosicionAutoevaluacion);
