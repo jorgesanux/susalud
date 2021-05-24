@@ -10,6 +10,18 @@ import javax.persistence.*;
 @Getter
 @Setter
 public class Entidad {
+    public Entidad() {
+    }
+
+    public Entidad(int id) {
+        this.id = id;
+    }
+
+    public Entidad(int id, String descripcion) {
+        this.id = id;
+        this.descripcion = descripcion;
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_entidad")

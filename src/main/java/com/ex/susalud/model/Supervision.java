@@ -47,15 +47,15 @@ public class Supervision implements Serializable {
 
     @OneToOne
     @JoinColumn(name = "id_plan",referencedColumnName = "id_plan")
-    private Plan id_plan;
+    private Plan plan;
 
     @OneToOne
     @JoinColumn(name = "id_etapa",referencedColumnName = "id_etapa")
-    private Etapa id_etapa;
+    private Etapa etapa;
 
     @OneToOne
     @JoinColumn(name = "id_entidad",referencedColumnName = "id_entidad")
-    private Entidad id_entidad;
+    private Entidad entidad;
 
 //    @OneToMany(mappedBy = "id_pos_supervision")
 //    private Set<PosicionSupervision> posicionesSupervisiones;

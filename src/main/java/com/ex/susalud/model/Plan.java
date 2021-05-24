@@ -10,6 +10,17 @@ import javax.persistence.*;
 @Getter
 @Setter
 public class Plan {
+    public Plan() {}
+
+    public Plan(int id) {
+        this.id = id;
+    }
+
+    public Plan(int id, String descripcion) {
+        this.id = id;
+        this.descripcion = descripcion;
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_plan")

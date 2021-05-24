@@ -10,6 +10,17 @@ import javax.persistence.*;
 @Getter
 @Setter
 public class TecnicaEvaluativa {
+    public TecnicaEvaluativa() { }
+
+    public TecnicaEvaluativa(int id) {
+        this.id = id;
+    }
+
+    public TecnicaEvaluativa(int id, String descripcion) {
+        this.id = id;
+        this.descripcion = descripcion;
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_tecnica")

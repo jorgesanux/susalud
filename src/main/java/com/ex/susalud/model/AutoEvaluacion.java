@@ -27,10 +27,10 @@ public class AutoEvaluacion {
 
     @OneToOne
     @JoinColumn(name = "id_etapa",referencedColumnName = "id_etapa")
-    private Etapa id_etapa;
+    private Etapa etapa;
 
     @OneToOne
     @JoinColumn(name = "id_estado",referencedColumnName = "id_estado")
-    private EstadoAutoEvaluacion id_estado;
+    private EstadoAutoEvaluacion estado;
 
 }
