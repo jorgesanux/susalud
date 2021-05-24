@@ -18,6 +18,9 @@ public class SupervisionController {
     @Autowired
     private SupervisionRepository supervisionRepository;
 
+    @Autowired
+    private PosicionSupervisionController posicionSupervisionController;
+
     @GetMapping(produces = {MediaType.APPLICATION_JSON_VALUE})
     public ResponseEntity<List<Supervision>> getAllSupervisiones(){
         return new ResponseEntity<>(supervisionRepository.findAll(), HttpStatus.OK);
@@ -35,7 +38,7 @@ public class SupervisionController {
             produces = {MediaType.APPLICATION_JSON_VALUE},
             consumes = {MediaType.APPLICATION_JSON_VALUE}
     )
-    public ResponseEntity<Supervision> getSupervisionById(@RequestBody Supervision supervision){
+    public ResponseEntity<Supervision> createSupervisionById(@RequestBody Supervision supervision){
         int idSupervision = supervisionRepository.save(supervision).getId();
         return getSupervisionById(idSupervision);
     }
