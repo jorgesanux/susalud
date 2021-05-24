@@ -45,4 +45,14 @@ public class PosicionSupervisionController {
         return getPosicionSupervisionById(idSupervision,idPosicionSupervision);
     }
 
+    @DeleteMapping(
+            path = PATH_ID
+    )
+    public ResponseEntity<PosicionSupervision> deletePosicionSupervisionById(
+            @PathVariable(value = "idSupervision") int idSupervision,
+            @PathVariable(value = "idPosicionSupervision") int idPosicionSupervision){
+        posicionSupervisionRepository.deleteBySupervisionIdAndId(idSupervision,idPosicionSupervision);
+        return new ResponseEntity<>(null, HttpStatus.OK);
+    }
+
 }
