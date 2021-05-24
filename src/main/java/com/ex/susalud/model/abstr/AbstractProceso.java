@@ -9,6 +9,13 @@ import javax.persistence.*;
 @Getter
 @Setter
 public abstract class AbstractProceso {
+
+    public AbstractProceso() { }
+
+    public AbstractProceso(int id) {
+        this.id = id;
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_proceso")

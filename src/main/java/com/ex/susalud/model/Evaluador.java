@@ -8,4 +8,11 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "evaluador")
-public class Evaluador extends Persona { }
+public class Evaluador extends Persona {
+    public Evaluador() {
+    }
+
+    public Evaluador(String documento) {
+        super(documento);
+    }
+}

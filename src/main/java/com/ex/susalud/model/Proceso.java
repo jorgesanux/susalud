@@ -9,4 +9,11 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "proceso")
-public class Proceso extends AbstractProceso { }
+public class Proceso extends AbstractProceso {
+    public Proceso() {
+    }
+
+    public Proceso(int id) {
+        super(id);
+    }
+}

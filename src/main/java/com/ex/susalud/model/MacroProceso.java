@@ -10,4 +10,10 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "macro_proceso")
 public class MacroProceso extends AbstractProceso {
+    public MacroProceso() {
+    }
+
+    public MacroProceso(int id) {
+        super(id);
+    }
 }

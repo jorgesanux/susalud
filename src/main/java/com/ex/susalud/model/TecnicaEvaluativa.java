@@ -16,11 +16,6 @@ public class TecnicaEvaluativa {
         this.id = id;
     }
 
-    public TecnicaEvaluativa(int id, String descripcion) {
-        this.id = id;
-        this.descripcion = descripcion;
-    }
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_tecnica")

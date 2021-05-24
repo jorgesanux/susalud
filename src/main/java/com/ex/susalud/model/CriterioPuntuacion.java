@@ -10,6 +10,13 @@ import javax.persistence.*;
 @Getter
 @Setter
 public class CriterioPuntuacion {
+    public CriterioPuntuacion() {
+    }
+
+    public CriterioPuntuacion(int id) {
+        this.id = id;
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_criterio")

@@ -7,4 +7,11 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "verificador")
-public class Verificador extends Persona { }
+public class Verificador extends Persona {
+    public Verificador() {
+    }
+
+    public Verificador(String documento) {
+        super(documento);
+    }
+}

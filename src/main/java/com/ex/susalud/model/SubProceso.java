@@ -10,4 +10,10 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "sub_proceso")
 public class SubProceso extends AbstractProceso {
+    public SubProceso() {
+    }
+
+    public SubProceso(int id) {
+        super(id);
+    }
 }

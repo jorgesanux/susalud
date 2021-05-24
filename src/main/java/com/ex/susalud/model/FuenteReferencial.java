@@ -10,6 +10,13 @@ import javax.persistence.*;
 @Getter
 @Setter
 public class FuenteReferencial {
+    public FuenteReferencial() {
+    }
+
+    public FuenteReferencial(int id) {
+        this.id = id;
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_fuente")

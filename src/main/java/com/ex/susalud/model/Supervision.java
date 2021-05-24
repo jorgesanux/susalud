@@ -19,6 +19,12 @@ public class Supervision implements Serializable {
     private enum Modalidad{INTEGRAL,SELECTIVA}
     private enum TipoIntervencion{INTEGRAL,SELECTIVA}
 
+    public Supervision() { }
+
+    public Supervision(int id) {
+        this.id = id;
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_supervision")

@@ -11,6 +11,13 @@ import javax.persistence.MappedSuperclass;
 @Getter
 @Setter
 public abstract class Persona {
+
+    public Persona() { }
+
+    public Persona(String documento) {
+        this.documento = documento;
+    }
+
     @Id
     @Column(name = "documento",length = 45)
     private String documento;
