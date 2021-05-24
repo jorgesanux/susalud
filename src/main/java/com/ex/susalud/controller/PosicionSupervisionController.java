@@ -28,17 +28,21 @@ public class PosicionSupervisionController {
             path = PATH_ID,
             produces = {MediaType.APPLICATION_JSON_VALUE}
     )
-    public ResponseEntity<PosicionSupervision> getPosicionSupervisionById(@PathVariable(value = "idPosicionSupervision") int idPosicionSupervision){
-        return new ResponseEntity<>(posicionSupervisionRepository.findById(idPosicionSupervision).get(), HttpStatus.OK);
+    public ResponseEntity<PosicionSupervision> getPosicionSupervisionById(
+            @PathVariable(value = "idSupervision") int idSupervision,
+            @PathVariable(value = "idPosicionSupervision") int idPosicionSupervision){
+        return new ResponseEntity<>(posicionSupervisionRepository.findBySupervisionIdAndId(idSupervision,idPosicionSupervision).get(), HttpStatus.OK);
     }
 
     @PostMapping(
             produces = {MediaType.APPLICATION_JSON_VALUE},
             consumes = {MediaType.APPLICATION_JSON_VALUE}
     )
-    public ResponseEntity<PosicionSupervision> createPosicionSupervision(@RequestBody PosicionSupervision posicionSupervision){
+    public ResponseEntity<PosicionSupervision> createPosicionSupervision(
+            @PathVariable(value = "idSupervision") int idSupervision,
+            @RequestBody PosicionSupervision posicionSupervision){
         int idPosicionSupervision = posicionSupervisionRepository.save(posicionSupervision).getId();
-        return getPosicionSupervisionById(idPosicionSupervision);
+        return getPosicionSupervisionById(idSupervision,idPosicionSupervision);
     }
 
 }
