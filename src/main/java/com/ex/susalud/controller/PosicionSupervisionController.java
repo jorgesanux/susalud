@@ -2,7 +2,6 @@ package com.ex.susalud.controller;
 
 import com.ex.susalud.model.PosicionSupervision;
 import com.ex.susalud.repository.PosicionSupervisionRepository;
-import com.ex.susalud.repository.SupervisionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
