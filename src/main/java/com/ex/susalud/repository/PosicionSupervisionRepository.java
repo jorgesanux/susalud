@@ -15,4 +15,7 @@ public interface PosicionSupervisionRepository extends JpaRepository<PosicionSup
 
     @Transactional
     void deleteBySupervisionIdAndId(int supervisionId, int idPosicionSupervision);
+
+    @Transactional
+    void deleteBySupervisionId(int supervisionId);
 }
