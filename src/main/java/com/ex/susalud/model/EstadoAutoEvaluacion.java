@@ -10,6 +10,14 @@ import javax.persistence.*;
 @Getter
 @Setter
 public class EstadoAutoEvaluacion {
+
+    public EstadoAutoEvaluacion() {
+    }
+
+    public EstadoAutoEvaluacion(int id) {
+        this.id = id;
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_estado")
