@@ -11,6 +11,13 @@ import java.time.LocalDate;
 @Getter
 @Setter
 public class AutoEvaluacion {
+    public AutoEvaluacion() {
+    }
+
+    public AutoEvaluacion(int id) {
+        this.id = id;
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_autoeva")
