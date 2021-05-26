@@ -1,4 +1,6 @@
 # API REST SuSalud
-SpringBoot y JPA\
-\
-API REST de dos procesos del documento SuSalud | Sistemas transaccionales | Parcial 3 | 2021
+
+API REST (parcial) de dos procesos del documento SuSalud | Sistemas transaccionales | Parcial 3 | 2021
+
+## Licencia
+Este proyecto cuenta con [licencia](LICENSE) conforme a los términos de la licencia GNU General Public License v3.0
