@@ -3,7 +3,6 @@ package com.ex.susalud.service;
 import com.ex.susalud.repository.PosicionSupervisionRepository;
 import com.ex.susalud.repository.SupervisionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
@@ -18,7 +17,7 @@ public class SupervisionService {
     private PosicionSupervisionRepository posicionSupervisionRepository;
 
     @Transactional
-    public void deleteSupervisionById(int idSupervision) throws DataIntegrityViolationException{
+    public void deleteSupervisionById(int idSupervision) {
         posicionSupervisionRepository.deleteBySupervisionId(idSupervision);
         supervisionRepository.deleteById(idSupervision);
     }
