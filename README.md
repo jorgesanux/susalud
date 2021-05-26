@@ -1,6 +1,7 @@
 # API REST SuSalud
 
-API REST (parcial) de dos procesos del documento SuSalud.
+API REST (parcial) de dos procesos del documento SuSalud.\
+Parcial 3 | Sistemas Transaccionales | Uniminuto 2021
 
 Herramientas
 ---------------
