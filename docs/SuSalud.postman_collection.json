@@ -1,0 +1,373 @@
+{
+	"info": {
+		"_postman_id": "b0c68ddd-bd41-4825-8ec2-2e5a8131d2d1",
+		"name": "SuSalud",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Supervision",
+			"item": [
+				{
+					"name": "PosicionSupervision",
+					"item": [
+						{
+							"name": "GET POSICION BY SUPERVISION",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:9090/api/supervision/4/posicion/4",
+									"host": [
+										"localhost"
+									],
+									"port": "9090",
+									"path": [
+										"api",
+										"supervision",
+										"4",
+										"posicion",
+										"4"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CREATE POSICION SUPERVSION",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"supervision\":4,\r\n    \"macroProceso\":1,\r\n    \"proceso\":1,\r\n    \"subProceso\":1,\r\n    \"verificador\":\"324894135\",\r\n    \"puntuacion\":10,\r\n    \"observaciones\":\"Revisión de estado\",\r\n    \"tecnicasEvaluativas\":[1,2,3],\r\n    \"fuentesReferenciales\":[1,2,3],\r\n    \"criteriosPuntuaciones\":[1,2,3]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:9090/api/supervision/4/posicion",
+									"host": [
+										"localhost"
+									],
+									"port": "9090",
+									"path": [
+										"api",
+										"supervision",
+										"4",
+										"posicion"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DELETE POSICION SUPERVISION",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:9090/api/supervision/4/posicion/5",
+									"host": [
+										"localhost"
+									],
+									"port": "9090",
+									"path": [
+										"api",
+										"supervision",
+										"4",
+										"posicion",
+										"5"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET ALL POSICIONES BY SUPERVISION",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:9090/api/supervision/1/posicion",
+									"host": [
+										"localhost"
+									],
+									"port": "9090",
+									"path": [
+										"api",
+										"supervision",
+										"1",
+										"posicion"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "GETALL SUPERVISIONES",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9090/api/supervision",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"supervision"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET SUPERVISION BY ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9090/api/supervision/4",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"supervision",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE SUPERVISION",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tipo\":\"FISCALIZADORA\",\r\n    \"modalidad\":\"SELECTIVA\",\r\n    \"tipoIntervencion\":\"SELECTIVA\",\r\n    \"fecha\":\"2021-02-13\",\r\n    \"cantidadAvance\":10,\r\n    \"totalAvance\":20,\r\n    \"plan\":1,\r\n    \"etapa\":2,\r\n    \"entidad\":3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9090/api/supervision",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"supervision"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE SUPERVISION",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:9090/api/supervision/1",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"supervision",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Autoevaluacion",
+			"item": [
+				{
+					"name": "PosicionAutoevaluacion",
+					"item": [
+						{
+							"name": "CREATE POSICION AUTOEVALUACION",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"puntuacion\":5,\r\n    \"observaciones\":\"Revisar detalladamente\",\r\n    \"autoEvaluacion\":4,\r\n    \"evaluador\":\"987654321\",\r\n    \"verificador\":\"324894135\",\r\n    \"macroProceso\":6,\r\n    \"proceso\":8,\r\n    \"subProceso\":10,\r\n    \"tecnicasEvaluativas\":[1,5,9],\r\n    \"fuentesReferenciales\":[4,2,6],\r\n    \"criteriosPuntuaciones\":[7,5,9]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:9090/api/autoevaluacion/4/posicion",
+									"host": [
+										"localhost"
+									],
+									"port": "9090",
+									"path": [
+										"api",
+										"autoevaluacion",
+										"4",
+										"posicion"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET ALL POSICION BY AUTOEVALUACION",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:9090/api/autoevaluacion/4/posicion",
+									"host": [
+										"localhost"
+									],
+									"port": "9090",
+									"path": [
+										"api",
+										"autoevaluacion",
+										"4",
+										"posicion"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET  POSICION BY AUTOEVALUACION",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:9090/api/autoevaluacion/4/posicion/1",
+									"host": [
+										"localhost"
+									],
+									"port": "9090",
+									"path": [
+										"api",
+										"autoevaluacion",
+										"4",
+										"posicion",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DELETE POSICION AUTOEVALUACION",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:9090/api/autoevaluacion/4/posicion/1",
+									"host": [
+										"localhost"
+									],
+									"port": "9090",
+									"path": [
+										"api",
+										"autoevaluacion",
+										"4",
+										"posicion",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "GETALL AUTOEVALUACION",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9090/api/autoevaluacion",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"autoevaluacion"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET AUTOEVALUACION BY ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9090/api/autoevaluacion/4",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"autoevaluacion",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE AUTOEVALUACION",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cantidadAvance\":10,\r\n    \"cantidadTotal\":20,\r\n    \"fecha\":\"2021-06-15\",\r\n    \"etapa\":3,\r\n    \"estado\":2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9090/api/autoevaluacion",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"autoevaluacion"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

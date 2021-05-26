@@ -9,16 +9,16 @@ Herramientas
 - MySQL Workbench
 - MariaDB
 - Java 11
+- Postman
 
-## Recursos de base de datos
-
-### Información necesaria
+## Información
 - Se debe crear una base de datos llamada <pre>susalud</pre>
-- El diagrama del modelo relacional [SuSalud.mwb](./db/SuSalud.mwb) fue creado con **MySQL Workbench**
-- El archivo [initQueries.sql](./db/initQueries.sql) contiene el llenado alternativo de las tablas de la base de datos.
+- El diagrama del modelo relacional [SuSalud.mwb](docs/db/SuSalud.mwb) fue creado con **MySQL Workbench**.
+- El archivo [initQueries.sql](docs/db/initQueries.sql) contiene el llenado alternativo de las tablas de la base de datos. 
+- [Collection](./docs/SuSalud.postman_collection.json) que se debe **importar en Postman** para probar la API REST.
 
 ### Diagrama del modelo relacional
-![Diagrama modelo relacional](./db/SuSalud.png)
+![Diagrama modelo relacional](docs/db/SuSalud.png)
 
 ## Licencia
 Este proyecto cuenta con [licencia](LICENSE) conforme a los términos de la licencia GNU General Public License v3.0
