@@ -11,7 +11,12 @@ Herramientas
 - Java 11
 - Postman
 
-## Información
+### Información del servidor
+- Para iniciar el servidor se debe ejecutar <pre>./gradlew bootRun</pre>
+- URL local de vista inicial _(Solo aplica cuando el servidor está iniciado de forma local)_ <pre>http://localhost:9090/api/</pre>
+- Para cambiar los datos de conexión a la base de datos, se debe modificar el archivo [application.properties](./src/main/resources/application.properties)
+
+### Infomación de base de datos
 - Se debe crear una base de datos llamada <pre>susalud</pre>
 - El diagrama del modelo relacional [SuSalud.mwb](docs/db/SuSalud.mwb) fue creado con **MySQL Workbench**.
 - El archivo [initQueries.sql](docs/db/initQueries.sql) contiene el llenado alternativo de las tablas de la base de datos. 
